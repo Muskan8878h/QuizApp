@@ -48,5 +48,23 @@ const loadQuestion=()=>{
 
 
 
+// reset.......
+const reset=()=>{
+    optionInputs.forEach(
+        (input)=>{
+            input.checked=false;
+        }
+    )
+
+}
+
+
+// endQuiz........
+const endQuiz=()=>{
+    document.getElementById("box").innerHTML=`
+    <h3> Thank you for playing the Quiz </h3>
+    <h2> ${right}/${total} are correct </h2>
+    `
+}
 // initial call
 loadQuestion();
