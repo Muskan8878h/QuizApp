@@ -47,6 +47,36 @@ const loadQuestion=()=>{
 }
 
 
+const submitQuiz=()=>{
+    const data=questions[index];
+    const ans=getAnswer();
+    if(ans===data.correct){
+        right++;
+    }
+    else{
+        wrong++;
+    }
+    index++;
+    loadQuestion();
+}
+
+
+let total=questions.length;
+let right=0,
+    wrong=0;
+const getAnswer=()=>{
+    let answer;
+    optionInputs.forEach(
+        (input)=>{
+            if(input.checked){
+                // console.log('yes');
+                answer=input.value;
+                // console.log(input.value);
+            }
+        }
+    )
+    return answer;
+}
 
 // reset.......
 const reset=()=>{
