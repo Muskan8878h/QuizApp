@@ -26,10 +26,12 @@ const questions= [
 ]
 
 let index=0;
-
+const quesBox= document.getElementById("quesBox")
 const loadQuestion=()=>{
     const data= questions[index];
     console.log(data);
+    // quesBox.innerText=data.que;
+    quesBox.innerText=`${index+1}) ${data.que}`;
 }
 
 // initial call
