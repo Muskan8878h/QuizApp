@@ -24,3 +24,13 @@ const questions= [
         'correct':'b'
     }
 ]
+
+let index=0;
+
+const loadQuestion=()=>{
+    const data= questions[index];
+    console.log(data);
+}
+
+// initial call
+loadQuestion();
