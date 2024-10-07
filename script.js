@@ -31,6 +31,11 @@ const quesBox= document.getElementById("quesBox");
 const optionInputs=document.querySelectorAll('.options');
 
 const loadQuestion=()=>{
+    if(index===total){
+        return endQuiz();
+    }
+    reset();
+    
     const data= questions[index];
     console.log(data);
     // quesBox.innerText=data.que;
@@ -40,6 +45,8 @@ const loadQuestion=()=>{
     optionInputs[2].nextElementSibling.innerText=data.c;
     optionInputs[3].nextElementSibling.innerText=data.d;
 }
+
+
 
 // initial call
 loadQuestion();
