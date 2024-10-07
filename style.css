@@ -44,3 +44,9 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+.options{
+    cursor: pointer;
+}
+label{
+    cursor: pointer;
+}
