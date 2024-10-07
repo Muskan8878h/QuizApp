@@ -26,12 +26,19 @@ const questions= [
 ]
 
 let index=0;
-const quesBox= document.getElementById("quesBox")
+const quesBox= document.getElementById("quesBox");
+
+const optionInputs=document.querySelectorAll('.options');
+
 const loadQuestion=()=>{
     const data= questions[index];
     console.log(data);
     // quesBox.innerText=data.que;
     quesBox.innerText=`${index+1}) ${data.que}`;
+    optionInputs[0].nextElementSibling.innerText=data.a;
+    optionInputs[1].nextElementSibling.innerText=data.b;
+    optionInputs[2].nextElementSibling.innerText=data.c;
+    optionInputs[3].nextElementSibling.innerText=data.d;
 }
 
 // initial call
